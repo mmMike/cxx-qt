@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>qobject::T - The generated QObject - CXX-Qt Documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../getting-started/index.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../getting-started/1-qobjects-in-rust.html"><strong aria-hidden="true">1.1.</strong> QObjects in Rust</a></li><li class="chapter-item expanded "><a href="../getting-started/2-our-first-cxx-qt-module.html"><strong aria-hidden="true">1.2.</strong> Our first CXX-Qt module</a></li><li class="chapter-item expanded "><a href="../getting-started/3-qml-gui.html"><strong aria-hidden="true">1.3.</strong> Creating the QML GUI</a></li><li class="chapter-item expanded "><a href="../getting-started/4-cmake-integration.html"><strong aria-hidden="true">1.4.</strong> Building with CMake</a></li><li class="chapter-item expanded "><a href="../getting-started/5-cargo-executable.html"><strong aria-hidden="true">1.5.</strong> Building with Cargo</a></li></ol></li><li class="chapter-item expanded "><a href="../qobject/index.html"><strong aria-hidden="true">2.</strong> QObject</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../qobject/bridge-macro.html"><strong aria-hidden="true">2.1.</strong> #[cxx_qt::bridge] - Bridge Macro</a></li><li class="chapter-item expanded "><a href="../qobject/qobject_struct.html"><strong aria-hidden="true">2.2.</strong> #[cxx_qt::qobject] - Defining QObjects</a></li><li class="chapter-item expanded "><a href="../qobject/signals_enum.html"><strong aria-hidden="true">2.3.</strong> #[cxx_qt::qsignals] - Signals enum</a></li><li class="chapter-item expanded "><a href="../qobject/generated-qobject.html" class="active"><strong aria-hidden="true">2.4.</strong> qobject::T - The generated QObject</a></li><li class="chapter-item expanded "><a href="../qobject/cxxqtthread.html"><strong aria-hidden="true">2.5.</strong> CxxQtThread</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">3.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/bridge.html"><strong aria-hidden="true">3.1.</strong> Bridge</a></li><li class="chapter-item expanded "><a href="../concepts/qt.html"><strong aria-hidden="true">3.2.</strong> Qt</a></li><li class="chapter-item expanded "><a href="../concepts/types.html"><strong aria-hidden="true">3.3.</strong> Types</a></li><li class="chapter-item expanded "><a href="../concepts/type-conversions.html"><strong aria-hidden="true">3.4.</strong> Type Conversions</a></li><li class="chapter-item expanded "><a href="../concepts/build_systems.html"><strong aria-hidden="true">3.5.</strong> Build Systems</a></li><li class="chapter-item expanded "><a href="../concepts/threading.html"><strong aria-hidden="true">3.6.</strong> Threading</a></li><li class="chapter-item expanded "><a href="../concepts/nested_objects.html"><strong aria-hidden="true">3.7.</strong> Nested Objects</a></li><li class="chapter-item expanded "><a href="../concepts/inheritance.html"><strong aria-hidden="true">3.8.</strong> Inheritance &amp; Overriding</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CXX-Qt Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!--
+SPDX-FileCopyrightText: 2022 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+SPDX-FileContributor: Andrew Hayzen <andrew.hayzen@kdab.com>
+
+SPDX-License-Identifier: MIT OR Apache-2.0
+-->
+<h1 id="qobjectt---the-generated-qobject"><a class="header" href="#qobjectt---the-generated-qobject"><code>qobject::T</code> - The generated QObject</a></h1>
+<p>One of the key features of CXX-Qt is the ability to create your own QObjects from Rust.
+This is what the <a href="./qobject_struct.html"><code>#[cxx_qt::qobject]</code> macro</a> is for.
+This page serves to document the details of what is generated and how to interact with the generated QObject from Rust.</p>
+<p>The <code>#[cxx_qt::qobject]</code> macro generates a QObject for a given Rust struct.
+Whilst this QObject is a C++ type, CXX-Qt will automatically wrap it as a <a href="https://cxx.rs/extern-c++.html#opaque-c-types">CXX Opaque Type</a>.
+These generated QObjects are accessible to Rust in a generated module with the name <code>qobject</code>. Each struct <code>T</code>'s generated QObject is accessible as <code>qobject::T</code>.</p>
+<h2 id="anatomy"><a class="header" href="#anatomy">Anatomy</a></h2>
+<p>Any QObject generated by CXX-Qt is just a C++ QObject subclass that owns an instance of the Rust struct.
+The instance of the Rust struct is constructed using its <a href="https://doc.rust-lang.org/std/default/trait.Default.html"><code>Default</code></a> implementation in the C++ constructor.
+Therefore implementing <code>Default</code> on the Rust struct is currently mandatory.</p>
+<p>The C++ object will defer any property state to the Rust struct, and is therefore only a thin wrapper.
+The data for <code>Q_PROPERTY</code>s is stored in the Rust struct. The property getters and setters modify the Rust struct internally.</p>
+<p>Additionally, CXX-Qt generates methods on this struct that help you interact with Qt functionality.
+This includes access to the <a href="./cxxqtthread.html"><code>CxxQtThread</code> struct</a>, as well as a function to emit signals.</p>
+<h2 id="referencing-another-qobject"><a class="header" href="#referencing-another-qobject">Referencing another QObject</a></h2>
+<p>The <code>qobject::T</code> type is defined both within the CXX-Qt bridge, as well as the surrounding module.
+The simplest way to reference it is from the surrounding module.</p>
+<p>Example:</p>
+<pre><code class="language-rust ignore noplayground">// In file qt_types.rs
+#[cxx_qt::bridge]
+mod ffi {
+  #[cxx_qt::qobject]
+  #[derive(Default)]
+  pub struct MyObject {}
+}
+</code></pre>
+<pre><code class="language-rust ignore noplayground">// In another module
+fn my_function(parameter: &amp;crate::qt_types::qobject::MyObject) { /* ... */ }
+</code></pre>
+<p>Unfortunately, nested QObjects aren't yet supported by CXX-Qt.
+Progress can be tracked in <a href="https://github.com/KDAB/cxx-qt/issues/299">#299</a>.</p>
+<h2 id="impl-qobjectt"><a class="header" href="#impl-qobjectt"><code>impl qobject::T</code></a></h2>
+<p>As mentioned before, the C++ QObject is exposed to Rust as an opaque CXX type.
+This allows you to implement methods for it in Rust using normal <code>impl</code> blocks.
+Because <code>qobject::T</code> is an opaque C++ type, the same rules as with normal CXX opaque types apply.
+Most importantly this means that the type may never be accessed by value or by mutable self reference directly.
+Rather, all methods must use either <code>&amp;self</code> or <code>self: Pin&lt;&amp;mut Self&gt;</code> as the self types. This prevents Rust from moving the data in memory, which would invalidate C++ pointers to it.</p>
+<p>For more information about pinning, refer to the <a href="https://doc.rust-lang.org/std/pin/">pin documentation</a>.</p>
+<p>In addition to methods that extend the Rust interface of a <code>qobject::T</code>, you may also mark methods within an <code>impl qobject::T</code> block with the <code>#[qinvokable]</code> attribute.
+These methods will be exposed to the C++ QObject and can be called by C++ or QML.
+See the <a href="./qobject_struct.html#invokables">QObject page</a> for more details.</p>
+<h2 id="available-functions"><a class="header" href="#available-functions">Available Functions</a></h2>
+<p>Every <code>qobject::T</code> struct provides the following methods:</p>
+<h3 id="access-to-the-qt-thread"><a class="header" href="#access-to-the-qt-thread">Access to the Qt thread</a></h3>
+<pre><code class="language-rust ignore noplayground">fn qt_thread(&amp;self) -&gt; UniquePtr&lt;CxxQtThread&gt;
+</code></pre>
+<p>This function provides you with a handle to the Qt thread that the QObject resides in.
+This is helpful as the QObject itself does not implement <a href="https://doc.rust-lang.org/std/marker/trait.Send.html">Send</a> nor <a href="https://doc.rust-lang.org/std/marker/trait.Sync.html">Sync</a>.
+The CxxQtThread however is Send and can therefore be moved into a different thread.
+By using the CxxQtThread's <code>queue</code> method, you may then queue a Rust closure onto the Qt thread again.
+The closure also takes a pinned mutable reference to the QObject, so that it can modify it.</p>
+<p>See the <a href="./cxxqtthread.html">CxxQtThread page</a> for more details.</p>
+<h3 id="signal-emission"><a class="header" href="#signal-emission">Signal emission</a></h3>
+<pre><code class="language-rust ignore noplayground">fn emit(self: Pin&lt;&amp;mut Self&gt;, signal: /*Your Signals enum goes here*/)
+</code></pre>
+<p>If there is a <a href="./signals_enum.html">Signals enum</a> defined, CXX-Qt will generate the appropriate <code>emit</code> function to allow you to emit signals.</p>
+<p>See the <a href="./signals_enum.html">Signals enum page</a> for more details.</p>
+<h3 id="access-to-internal-rust-struct"><a class="header" href="#access-to-internal-rust-struct">Access to internal Rust struct</a></h3>
+<p>For every field in the Rust struct, CXX-Qt will generate appropriate getters and setters.
+See the <a href="./qobject_struct.html#properties">QObject page</a> for details.</p>
+<p>There is also an advanced way to access the data in the internal Rust struct:</p>
+<pre><code class="language-rust ignore noplayground">fn rust(&amp;self) -&gt; &amp;T
+unsafe fn rust_mut(self: Pin&lt;&amp;mut Self&gt;) -&gt; &amp;mut T
+</code></pre>
+<p>Where <code>T</code> is the struct with the <code>#[cxx_qt::qobject]</code> macro.</p>
+<p>This allows you to directly manipulate the internal Rust struct without having to use the generated accessor methods.</p>
+<p>You may notice that the mutable version of this is <code>unsafe</code> to call.
+This is by design.
+Modifying a field that corresponds to a <code>#[qproperty]</code> without calling the appropriate changed signal may cause a logic error in C++/QML code.
+Therefore all direct access to a struct that is wrapped in a QObject is unsafe!</p>
+<p>You may modify the struct and then manually call the required changed signals.</p>
+<p>For safe access, prefer using the generated accessor methods for both <a href="./qobject_struct.html#properties">properties</a>, as well as <a href="./qobject_struct.html#private-methods-and-fields">normal fields</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../qobject/signals_enum.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../qobject/cxxqtthread.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../qobject/signals_enum.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../qobject/cxxqtthread.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
